@@ -1,0 +1,22 @@
+apiVersion: paas.network.source/v1
+kind: Relayer
+metadata:
+  labels:
+  name: devnet-relayer
+spec:
+  spec:
+  chains:
+  - chainId: {{ .Values.sourcehubChainId }}
+    mnemonicSecretRef: sourcehub-sourcehub-devnet-authority-data
+    rpcAddr: 'http://sourcehub-sourcehub-devnet-validator-root-0.sourcehub-sourcehub-devnet:26657'
+    grpcAddr: 'http://sourcehub-sourcehub-devnet-validator-root-0.sourcehub-sourcehub-devnet:9090'
+    eventSourceAddr: 'ws://sourcehub-sourcehub-devnet-validator-root-0.sourcehub-sourcehub-devnet:26657/websocket'
+    addressPrefix: 'source'
+    addressType: Cosmos
+  - chainId: {{ .Values.shinzohub.chainId | quote }}
+    mnemonicSecretRef: shinzo-9001-mnemonic
+    rpcAddr: 'http://localhost:26657'
+    grpcAddr: 'http://localhost:9090'
+    eventSourceAddr: 'ws://localhost:26657/websocket'
+    addressPrefix: 'shinzo'
+    addressType: Ethermint

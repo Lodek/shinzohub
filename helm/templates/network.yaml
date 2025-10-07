@@ -1,0 +1,13 @@
+apiVersion: paas.network.source/v1
+kind: Network
+metadata:
+  labels:
+  name: sourcehub
+spec:
+  chainId: {{ .Values.sourcehubChainId }}
+  rpcReplicas: 1
+  validators:
+    count: 2
+  faucet:
+    replicas: 1
+  ingressClass: "nginx"

@@ -1,0 +1,9 @@
+apiVersion: paas.network.source/v1
+kind: IBCConnection
+metadata:
+  labels:
+  name: shinzohub-sourcehub
+spec:
+  relayerRef: devnet-relayer
+  leftChain: sourcehub-devnet
+  rightChain: '9001'

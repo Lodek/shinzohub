@@ -1,0 +1,13 @@
+shinzohub:
+  # mnemonic is the mnemonic of they key which will be imported by the
+  # relayer in order to broadcast txs
+  # taken from test_node.sh
+  # shinzo140fehngcrxvhdt84x729p3f0qmkmea8nq3rk92
+  #
+  # node: for testnet, this should not be hardcoded
+  mnemonic: "decorate bright ozone fork gallery riot bus exhaust worth way bone indoor calm squirrel merry zero scheme cotton until shop any excess stage laundry"
+  # chainId of the chain to connect to
+  # must be a string
+  chainId: "9001"
+
+sourcehubChainId: "sourcehub-devnet"
